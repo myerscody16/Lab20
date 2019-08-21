@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewData["Title"] = "RegisterNewUser";
+}
+
+<h1>RegisterNewUser</h1>
+
+@model Lab20.Models.RegisterUser
+
+@using (var form = Html.BeginForm())
+{
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.Password)
+        @Html.TextBoxFor(m => m.Password)
+    </div>
+    <div>
+        @Html.LabelFor(m => m.FavoriteColor)
+        @Html.TextBoxFor(m => m.FavoriteColor)
+    </div>
+    <input type="submit" value="Submit" />
+}

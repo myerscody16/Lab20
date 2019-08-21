@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "List Users";
+}
+
+<h1>List Users</h1>
+
+@model IEnumerable<Lab20.Models.RegisterUser>
+
+<table class="table">
+    <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Birthday</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Favorite Color</th>
+    </tr>
+    @foreach (var infoPiece in Model)
+    {
+        <tr>
+            <td>@infoPiece.FirstName</td>
+            <td>@infoPiece.LastName</td>
+            <td>@infoPiece.Birthday</td>
+            <td>@infoPiece.Email</td>
+            <td>@infoPiece.Password</td>
+            <td>@infoPiece.FavoriteColor</td>
+        </tr>
+    }
+</table>

@@ -17,7 +17,6 @@ namespace Lab20.Models
         [Required]
         public DateTime Birthday { get; set; }
         [Required]
-        [RegularExpression(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)")]
         public string Email { get; set; }
         [Required]
         [StringLength(30, ErrorMessage = "Must be between 3 and 30 characters", MinimumLength = 3)]
